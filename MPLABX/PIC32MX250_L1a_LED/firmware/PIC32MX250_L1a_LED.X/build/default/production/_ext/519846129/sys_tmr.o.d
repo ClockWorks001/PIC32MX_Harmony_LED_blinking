@@ -1,8 +1,9 @@
-build/default/production/_ext/1407244131/drv_tmr_static.o:  \
- ../src/system_config/default/framework/driver/tmr/src/drv_tmr_static.c  \
- ../src/system_config/default/framework/driver/tmr/drv_tmr_static.h  \
- ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/drv_tmr.h  \
+build/default/production/_ext/519846129/sys_tmr.o:  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/system/tmr/src/sys_tmr.c  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/system/tmr/src/sys_tmr_local.h  \
  ../src/system_config/default/system_config.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/system/tmr/sys_tmr.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/drv_tmr.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/driver_common.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/tmr/plib_tmr.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/tmr/processor/tmr_processor.h  \
@@ -113,4 +114,6 @@ build/default/production/_ext/1407244131/drv_tmr_static.o:  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/osc/processor/../templates/osc_ResetPLL_Unsupported.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/osc/processor/../templates/osc_PLLBypass_Unsupported.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/osc/processor/../templates/osc_BTPLLClockOut_Unsupported.h  \
- ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/src/drv_tmr_variant_mapping.h 
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/osal.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/osal_definitions.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/src/osal_impl_basic.h 

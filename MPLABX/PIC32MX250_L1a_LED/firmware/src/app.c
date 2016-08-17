@@ -86,6 +86,24 @@ APP_DATA appData;
 
 /* TODO:  Add any necessary callback functions.
 */
+SYS_TMR_HANDLE handle20ms, handle30ms;
+void Test_Callback ( uintptr_t context, uint32_t currTick );
+
+bool Pin_C8_1,  Pin_C8_2;
+void Test_Callback ( uintptr_t context, uint32_t currTick )
+{
+    Pin_C8_1 = PLIB_PORTS_PinGet (PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+    PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+    Pin_C8_2 = PLIB_PORTS_PinGet (PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+    if ( context == 1 )
+    {
+        //20 ms
+    }
+    else
+    {
+        //30 ms
+    }
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -121,6 +139,7 @@ void APP_Initialize ( void )
     /* TODO: Initialize your application's state machine and other
      * parameters.
      */
+   
 }
 
 
@@ -141,9 +160,12 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
+  
+            PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+            handle20ms = SYS_TMR_CallbackPeriodic ( 500, 1, Test_Callback );
+ 
             bool appInitialized = true;
        
-        
             if (appInitialized)
             {
             
@@ -154,6 +176,14 @@ void APP_Tasks ( void )
 
         case APP_STATE_SERVICE_TASKS:
         {
+            if(PLIB_PORTS_PinGet (PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_13)) 
+            {
+                PLIB_PORTS_PinSet (PORTS_ID_0, PORT_CHANNEL_A, PORTS_BIT_POS_10);
+//                PLIB_PORTS_PinSet (PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+            } else{
+                PLIB_PORTS_PinClear (PORTS_ID_0, PORT_CHANNEL_A, PORTS_BIT_POS_10);
+//                PLIB_PORTS_PinClear (PORTS_ID_0, PORT_CHANNEL_C, PORTS_BIT_POS_8);
+            }
         
             break;
         }

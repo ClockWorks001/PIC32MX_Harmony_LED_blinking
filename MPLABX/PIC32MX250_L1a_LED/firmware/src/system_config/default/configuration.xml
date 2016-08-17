@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<configuration version="1.0.7.16">
+<configuration version="1.0.8.7">
   <General>
     <HarmonyPath path="../../../../../../Microchip/harmony/v1_07_01"/>
+    <Processor name="PIC32MX250F128D"/>
     <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
   </General>
   <Manifest>
     <Files>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_ports.c</Name>
+        <Path>Source Files/framework/system/ports/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
       <File>
         <Name>sys_module.h</Name>
         <Path>Header Files/framework/system/common</Path>
@@ -19,16 +53,8 @@
         <Path>Source Files/framework/system/devcon/src</Path>
       </File>
       <File>
-        <Name>drv_tmr.h</Name>
-        <Path>Header Files/framework/driver/tmr</Path>
-      </File>
-      <File>
-        <Name>sys_devcon.c</Name>
-        <Path>Source Files/framework/system/devcon/src</Path>
-      </File>
-      <File>
-        <Name>sys_ports.c</Name>
-        <Path>Source Files/framework/system/ports/src</Path>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
       </File>
       <File>
         <Name>sys_common.h</Name>
@@ -39,16 +65,8 @@
         <Path>Source Files/framework/system/int/src</Path>
       </File>
       <File>
-        <Name>sys_devcon.h</Name>
-        <Path>Header Files/framework/system/devcon</Path>
-      </File>
-      <File>
         <Name>sys_int.h</Name>
         <Path>Header Files/framework/system/int</Path>
-      </File>
-      <File>
-        <Name>system.h</Name>
-        <Path>Header Files/framework/system</Path>
       </File>
     </Files>
     <Templates>
@@ -60,26 +78,16 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>75BF46C1253D7151A189257CEE506D90</Checksum>
+        <Checksum>70A0535E1ECAF9DD79CEA17735567A15</Checksum>
       </Template>
       <Template>
         <Name>main.c</Name>
         <Path>Source Files/app</Path>
       </Template>
       <Template>
-        <Name>drv_tmr_static.h</Name>
-        <Path>Header Files/app/system_config/default/framework/driver/tmr</Path>
-        <Checksum>5B1227C9C8A50A58EB2DAB66BF09B4E6</Checksum>
-      </Template>
-      <Template>
-        <Name>drv_tmr_mapping.c</Name>
-        <Path>Source Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum>0651845480D5D3E21D8BF17EE68DBEAC</Checksum>
-      </Template>
-      <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>8DC02B3AC60D415682554CC6B81D1636</Checksum>
+        <Checksum>1F7DF4B8C5A1CE8F9F4D30F553C01CBE</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -93,21 +101,16 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+        <Checksum>3C43AA41A53478C3E6863727F0C6E199</Checksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>0BF459B430D4CA538924424EFA365689</Checksum>
+        <Checksum>8648384D1AD7050B9BA40555EB1C2086</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
         <Path>Header Files/app</Path>
-      </Template>
-      <Template>
-        <Name>drv_tmr_static.c</Name>
-        <Path>Source Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum>02D8D990BB109DB92EDF84939229DB47</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
@@ -117,7 +120,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>03F250858B994927585E99A779B79A78</Checksum>
+        <Checksum>E4D5EDEB1B293B1506275C9A8F9E246F</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
@@ -125,6 +128,15 @@
         <Checksum>6AF033A7E8ECB69981D88ED27526EF17</Checksum>
       </Template>
     </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\app01\APIC\PIC32MX\20160522_PIC32MX250_Harmony_LED\MPLABX\PIC32MX250_L1a_LED\firmware\src"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160522_PIC32MX250_Harmony_LED\MPLABX\PIC32MX250_L1a_LED\firmware\src\system_config\default"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160522_PIC32MX250_Harmony_LED\MPLABX\PIC32MX250_L1a_LED\firmware\src\default"/>
+        <Include value="C:\Microchip\harmony\v1_07_01\framework"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160522_PIC32MX250_Harmony_LED\MPLABX\PIC32MX250_L1a_LED\firmware\src\system_config\default\framework"/>
+      </C32>
+    </CompilerItems>
     <Libraries>
       <Library value="../../../../../../../../Microchip/harmony/v1_07_01/bin/framework/peripheral/PIC32MX250F128D_peripherals.a"/>
     </Libraries>

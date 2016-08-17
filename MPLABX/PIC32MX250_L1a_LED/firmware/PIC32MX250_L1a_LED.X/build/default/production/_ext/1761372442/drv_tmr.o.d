@@ -1,6 +1,6 @@
-build/default/production/_ext/1360937237/app.o:  \
-../src/app.c  \
-../src/app.h  \
+build/default/production/_ext/1761372442/drv_tmr.o:  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/src/dynamic/drv_tmr.c  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/src/drv_tmr_local.h  \
  ../src/system_config/default/system_config.h  \
  ../src/system_config/default/system_definitions.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/system/common/sys_common.h  \
@@ -147,4 +147,9 @@ build/default/production/_ext/1360937237/app.o:  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/ports/processor/../templates/ports_ChannelChangeNoticeMethod_Unsupported.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/ports/processor/../templates/ports_ChangeNoticeEdgeControl_Unsupported.h  \
  ../../../../../../../../Microchip/harmony/v1_07_01/framework/peripheral/ports/processor/../templates/ports_ChangeNoticeEdgeStatus_Unsupported.h  \
- ../src/app.h 
+ ../src/app.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/src/drv_tmr_variant_mapping.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/osal.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/osal_definitions.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/osal/src/osal_impl_basic.h  \
+ ../../../../../../../../Microchip/harmony/v1_07_01/framework/driver/tmr/drv_tmr_compatibility.h 
